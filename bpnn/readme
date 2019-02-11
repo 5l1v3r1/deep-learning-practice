@@ -1,0 +1,4 @@
+总体来说识别准确度都不高，训练集5000可能还是不够，主要是丢失了二维信息
+此外作者改动了OCR中的BP算法代码实现的部分，教程应该是写错了
+output_errors = np.mat(actual_vals).T - np.mat(y2) # 10 * 1 原本的，改为如下
+output_errors = np.multiply((np.mat(actual_vals).T - np.mat(y2)), self.sigmoid_prime(sum2)) # 10 * 1
